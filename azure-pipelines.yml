@@ -3,6 +3,10 @@ pool:
 trigger:
   - master
 steps:
+  - task: NodeTool@0
+    displayName: 'Use Node <=10'
+    inputs:
+      versionSpec: '<=10'
   - task: Npm@1
     inputs:
       command: install
